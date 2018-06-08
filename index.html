@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Famous authors and their books</title>
+    <link href="index.css" type="text/css" rel="stylesheet">
+</head>
+    <body>
+        <h1>Assignment ClinFlow</h1>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="./index.js"></script>
+        <p id="max_books"></p>
+        <p id="year"></p><br><br>
+
+        <!-- Search function -->
+        <input type="text" id="input" onkeyup="search_book()" placeholder="Search for book"><br><br>
+
+        <!-- Table referencing the books with their author and the year it was written -->
+        <table id="table">
+            <tr>
+                <th>Book</th>
+                <th>Author</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td id="book_1_b"></td>
+                <td id="book_1_a"></td>
+                <td id="book_1_y"></td>
+            </tr>
+            <tr>
+                <td id="book_2_b"></td>
+                <td id="book_2_a"></td>
+                <td id="book_2_y"></td>
+            </tr>
+            <tr>
+                <td id="book_3_b"></td>
+                <td id="book_3_a"></td>
+                <td id="book_3_y"></td>
+            </tr>
+            <tr>
+                <td id="book_4_b"></td>
+                <td id="book_4_a"></td>
+                <td id="book_4_y"></td>
+            </tr>
+            <tr>
+                <td id="book_5_b"></td>
+                <td id="book_5_a"></td>
+                <td id="book_5_y"></td>
+            </tr>
+            <tr>
+                <td id="book_6_b"></td>
+                <td id="book_6_a"></td>
+                <td id="book_6_y"></td>
+            </tr>
+            <tr>
+                <td id="book_7_b"></td>
+                <td id="book_7_a"></td>
+                <td id="book_7_y"></td>
+            </tr>
+        </table>
+
+        <!-- Script allow the user to search for a specific book -->
+    <script>
+        function search_book() {
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("input");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("table");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    if (td.innerHTML.toUpperCase().indexOf(filter) != -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+        }
+    }</script>
+    </body>
+</html>

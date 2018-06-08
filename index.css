@@ -1,0 +1,31 @@
+input {
+    width: 500px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    padding: 10px 10px 10px 10px;
+}
+
+table {
+    border: 2px solid grey;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+
+table, th, td {
+    text-align: left;
+    padding: 10px;
+}
+
+th {
+    border-bottom: 2px solid grey;
+}
+
+tr {
+    border-bottom: 1px solid darkgray;
+}
+
+th, td {
+    border-right: 2px solid grey;
+}
